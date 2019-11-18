@@ -1,0 +1,52 @@
+<div class="myNavbar">
+  <nav class="navbar navbar-expand-lg navbar-light ">
+    <button
+      id="myNavToggler"
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      (click)="isShown = !isShown"
+      [attr.aria-expanded]="isShown"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div
+      class="collapse navbar-collapse"
+      [ngClass]="{ show: isShown }"
+      id="navbarTogglerDemo02"
+    >
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" (click)="isShown = false" routerLink="/home"
+            >Home <span class="sr-only">(current)</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="isShown = false" routerLink="/contact"
+            >Contact</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            (click)="isShown = false"
+            routerLink="/opleidingen"
+            >Opleidingen</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            (click)="isShown = false"
+            routerLink="/my-app-store"
+            >Apps</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
